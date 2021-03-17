@@ -19,8 +19,11 @@ from core import views as core_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", core_views.listing, name="listing"),
+    path("listing/", core_views.listing, name="listing"),
     path("view_blog/<int:blog_id>", core_views.view_blog, name="view_blog"),
     path("update/<int:blog_id>", core_views.update,name="update"),
     path("delete/<int:blog_id>", core_views.destroy, name="delete"),
+    path("register/",core_views.singup,name='register'),
+    path('',core_views.login,name='login'),
+     path('logout/',core_views.logout,name='logout'),
  ]

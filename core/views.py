@@ -38,7 +38,7 @@ def destroy(request, blog_id):
     blog.delete()
     return redirect("listing")   
 
-def singup(request):
+def signup(request):
     if request.method == 'POST':
              
         username = request.POST['username']
